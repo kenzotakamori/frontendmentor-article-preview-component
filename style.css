@@ -18,9 +18,9 @@ body {
 }
 
 .container {
-  min-width: 800px;
-  width: 70vw;
-  min-height: 50vh;
+  min-width: 700px;
+  width: 60vw;
+  min-height: 40vh;
   height: auto;
   border-radius: 1rem;
   display: grid;
@@ -31,18 +31,28 @@ body {
   height: auto;
   border-radius: 1rem 0 0 1rem;
   background-image: url("/images/drawers.jpg");
+  background-size: auto 100%;
+  background-position: 15%;
 }
 
 section {
   padding: 2rem;
+  height: auto;
+  display: grid;
+  gap: 1rem;
 }
 section h1 {
   color: #48556a;
+  margin: 0;
+  font-size: 1.4rem;
 }
 section p {
   color: #6d7f97;
+  margin: 0;
+  line-height: 1.5rem;
 }
 section .info {
+  height: 3rem;
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-column-gap: 1rem;
