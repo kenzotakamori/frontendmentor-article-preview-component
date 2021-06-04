@@ -4,7 +4,7 @@ $very-dark-blue: hsl(217, 19%, 35%);
 $desaturated-dark-blue: hsl(214, 17%, 51%);
 $grayish-blue: hsl(212, 23%, 69%);
 $light-grayish-blue: hsl(210, 46%, 95%);
-$white: hsl(0, 0, 100%);
+$white: hsl(0, 0%, 100%);
 
 html {
     height: 100%;
@@ -25,13 +25,28 @@ body {
 }
 
 .container {
-    width: 50%;
+    width: 60vw;
     border-radius: 1rem;
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: fit-content(350px) fit-content(450px);
     background-color: $white;
+    height: auto;
+    &_image {
+        height: auto;
+        img.drawers {
+            height: auto;
+            max-width: 100%;
+            border-radius: 1rem 0 0 1rem;
+            object-fit: cover;
+            object-position: 0%;
+        }
+    }
 }
 
 section {
     padding: 2rem;
+}
+
+#share-modal {
+    display: none;
 }

@@ -18,15 +18,30 @@ body {
 }
 
 .container {
-  width: 50%;
+  width: 60vw;
   border-radius: 1rem;
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: fit-content(350px) fit-content(450px);
   background-color: white;
+  height: auto;
+}
+.container_image {
+  height: auto;
+}
+.container_image img.drawers {
+  height: auto;
+  max-width: 100%;
+  border-radius: 1rem 0 0 1rem;
+  object-fit: cover;
+  object-position: 0%;
 }
 
 section {
   padding: 2rem;
+}
+
+#share-modal {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
