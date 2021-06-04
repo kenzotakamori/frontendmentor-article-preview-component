@@ -16,10 +16,15 @@ body {
   font-family: "Manrope", sans-serif;
   background-color: #ecf2f8;
 }
+@media (max-width: 800px) {
+  body {
+    width: 375px;
+  }
+}
 
 .container {
   min-width: 700px;
-  width: 60vw;
+  width: 55vw;
   min-height: 40vh;
   height: auto;
   border-radius: 1rem;
@@ -34,9 +39,25 @@ body {
   background-size: auto 100%;
   background-position: 15%;
 }
+@media (max-width: 800px) {
+  .container {
+    min-width: auto;
+    width: 95vw;
+    max-width: 400px;
+    grid-template-columns: none;
+    grid-auto-flow: row;
+  }
+  .container .container_image {
+    width: 100%;
+    height: 220px;
+    border-radius: 1rem 1rem 0 0;
+    background-size: 100%;
+    background-position: 0% 10%;
+  }
+}
 
 section {
-  padding: 2rem;
+  padding: 2rem 3rem;
   height: auto;
   display: grid;
   gap: 1rem;
@@ -44,7 +65,7 @@ section {
 section h1 {
   color: #48556a;
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 section p {
   color: #6d7f97;
@@ -77,6 +98,14 @@ section .info button#share-button {
   border: none;
   border-radius: 50%;
   background-color: #ecf2f8;
+  width: 2rem;
+  height: 2rem;
+  align-self: center;
+}
+@media (max-width: 800px) {
+  section {
+    padding: 3rem 2rem 2rem;
+  }
 }
 
 #share-modal {
