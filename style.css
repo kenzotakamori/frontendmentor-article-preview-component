@@ -93,14 +93,30 @@ section .info span {
   grid-row: 2;
   color: #6d7f97;
 }
-section .info button#share-button {
+section .info div#share-button {
   grid-row: 1/3;
+  position: relative;
+  align-self: center;
+}
+section .info div#share-button button {
   border: none;
   border-radius: 50%;
   background-color: #ecf2f8;
   width: 2rem;
   height: 2rem;
-  align-self: center;
+  transition: all 0.2s ease;
+}
+section .info div#share-button button img {
+  transition: all 0.2s ease;
+}
+section .info div#share-button:hover button {
+  background-color: #48556a;
+}
+section .info div#share-button:hover img {
+  filter: brightness(0) invert(1);
+}
+section .info div#share-button:hover > #share-modal {
+  visibility: visible;
 }
 @media (max-width: 800px) {
   section {
@@ -109,7 +125,40 @@ section .info button#share-button {
 }
 
 #share-modal {
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  background-color: #48556a;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  border-radius: 0.75rem;
+  top: -200%;
+  left: -300%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+#share-modal .content {
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  padding: 0 2rem;
+  width: 10rem;
+}
+#share-modal .content:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 45%;
+  width: 0;
+  border-top: 10px solid #48556a;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+#share-modal span {
+  color: #9eafc2;
+  text-transform: uppercase;
+  font-family: "Manrope", sans-serif;
+  letter-spacing: 0.3rem;
+  font-size: 0.7rem;
 }
 
 /*# sourceMappingURL=style.css.map */

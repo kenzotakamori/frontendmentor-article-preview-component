@@ -94,14 +94,32 @@ section {
             grid-row: 2;
             color: $desaturated-dark-blue;
         }
-        button#share-button {
+        div#share-button {
             grid-row: 1 / 3;
-            border: none;
-            border-radius: 50%;
-            background-color: $light-grayish-blue;
-            width: 2rem;
-            height: 2rem;
+            position: relative;
             align-self: center;
+            button {
+                border: none;
+                border-radius: 50%;
+                background-color: $light-grayish-blue;
+                width: 2rem;
+                height: 2rem;
+                transition: all .2s ease;
+                img {
+                    transition: all .2s ease;
+                }
+            }
+            &:hover {
+                button {
+                    background-color: $very-dark-blue;
+                }
+                img {
+                    filter: brightness(0) invert(1);
+                }
+                & > #share-modal {
+                    visibility: visible;
+                }
+            }
         }
     }
     @media (max-width: 800px) {
@@ -110,5 +128,38 @@ section {
 }
 
 #share-modal {
-    display: none;
+    visibility: hidden;
+    position: absolute;
+    background-color: $very-dark-blue;
+    height: 2.75rem;
+    display: grid;
+    place-items: center;
+    border-radius: .75rem;
+    top: -200%;
+    left: -300%;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    .content {
+        display: grid;
+        grid-auto-flow: column;
+        place-items: center;
+        padding: 0 2rem;
+        width: 10rem;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 45%;
+            width: 0;
+            border-top: 10px solid $very-dark-blue;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+    }
+    span {
+        color: $grayish-blue;
+        text-transform: uppercase;
+        font-family: "Manrope", sans-serif;
+        letter-spacing: .3rem;
+        font-size: .7rem;
+    }
 }
