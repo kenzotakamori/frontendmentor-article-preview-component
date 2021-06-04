@@ -39,6 +39,37 @@ body {
 section {
   padding: 2rem;
 }
+section h1 {
+  color: #48556a;
+}
+section p {
+  color: #6d7f97;
+}
+section .info {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+section .info > img {
+  grid-row: 1/3;
+  width: 3rem;
+  height: auto;
+  border-radius: 50%;
+}
+section .info h3 {
+  margin: 0;
+  grid-row: 1/2;
+  color: #48556a;
+}
+section .info span {
+  grid-row: 2/3;
+  color: #6d7f97;
+}
+section .info button#share-button {
+  grid-row: 1/3;
+  border: none;
+  border-radius: 50%;
+  background-color: #ecf2f8;
+}
 
 #share-modal {
   display: none;

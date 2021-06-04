@@ -45,6 +45,37 @@ body {
 
 section {
     padding: 2rem;
+    h1 {
+        color: $very-dark-blue;
+    }
+    p {
+        color: $desaturated-dark-blue;
+    }
+    .info {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        & > img {
+            grid-row: 1 / 3;
+            width: 3rem;
+            height: auto;
+            border-radius: 50%;
+        }
+        h3 {
+            margin: 0;
+            grid-row: 1 / 2;
+            color: $very-dark-blue;
+        }
+        span {
+            grid-row: 2 / 3;
+            color: $desaturated-dark-blue;
+        }
+        button#share-button {
+            grid-row: 1 / 3;
+            border: none;
+            border-radius: 50%;
+            background-color: $light-grayish-blue;
+        }
+    }
 }
 
 #share-modal {
