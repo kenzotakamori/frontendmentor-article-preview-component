@@ -110,10 +110,10 @@ section .info div#share-button button {
 section .info div#share-button button img {
   transition: all 0.2s ease;
 }
-section .info div#share-button:hover button {
+section .info div#share-button button:hover {
   background-color: #48556a;
 }
-section .info div#share-button:hover img {
+section .info div#share-button button:hover img {
   filter: brightness(0) invert(1);
 }
 @media (max-width: 800px) {
@@ -132,6 +132,7 @@ section .info div#share-button:hover img {
   border-radius: 0.75rem;
   top: 54%;
   right: -5.5%;
+  margin-bottom: 3rem;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 #share-modal .content {
@@ -166,12 +167,25 @@ section .info div#share-button:hover img {
     border-radius: 0 0 1rem 1rem;
     width: 100%;
     height: 80px;
+    margin-bottom: 0;
   }
   #share-modal .content {
     width: 100%;
   }
   #share-modal .content:before {
     content: none;
+  }
+}
+
+@media (max-width: 800px) {
+  #share-modal.open-mobile {
+    visibility: visible;
+  }
+}
+
+@media (min-width: 800px) {
+  #share-modal.open-desktop {
+    visibility: visible;
   }
 }
 

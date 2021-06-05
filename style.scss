@@ -109,13 +109,11 @@ section {
                 img {
                     transition: all .2s ease;
                 }
-            }
-            &:hover {
-                button {
+                &:hover {
                     background-color: $very-dark-blue;
-                }
-                img {
-                    filter: brightness(0) invert(1);
+                    img {
+                        filter: brightness(0) invert(1);
+                    }
                 }
             }
         }
@@ -135,6 +133,7 @@ section {
     border-radius: .75rem;
     top: 54%;
     right: -5.5%;
+    margin-bottom: 3rem;
     box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     .content {
         display: grid;
@@ -167,11 +166,24 @@ section {
         border-radius: 0 0 1rem 1rem;
         width: 100%;
         height: 80px;
+        margin-bottom: 0;
         .content {
             width: 100%;
             &:before {
                 content: none;
             }
         }
+    }
+}
+
+#share-modal.open-mobile {
+    @media (max-width: 800px) {
+        visibility: visible;
+    }
+}
+
+#share-modal.open-desktop {
+    @media (min-width: 800px) {
+        visibility: visible;
     }
 }
