@@ -123,7 +123,7 @@ section .info div#share-button button:hover img {
 }
 
 #share-modal {
-  visibility: hidden;
+  opacity: 0;
   position: absolute;
   background-color: #48556a;
   height: 2.75rem;
@@ -133,6 +133,7 @@ section .info div#share-button button:hover img {
   top: 54%;
   right: -5.5%;
   margin-bottom: 3rem;
+  transition: all 0.5s ease;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 #share-modal .content {
@@ -179,13 +180,13 @@ section .info div#share-button button:hover img {
 
 @media (max-width: 800px) {
   #share-modal.open-mobile {
-    visibility: visible;
+    opacity: 1;
   }
 }
 
 @media (min-width: 800px) {
   #share-modal.open-desktop {
-    visibility: visible;
+    opacity: 1;
   }
 }
 
