@@ -23,6 +23,7 @@ body {
 }
 
 .container {
+  position: relative;
   min-width: 700px;
   width: 55vw;
   min-height: 40vh;
@@ -115,9 +116,6 @@ section .info div#share-button:hover button {
 section .info div#share-button:hover img {
   filter: brightness(0) invert(1);
 }
-section .info div#share-button:hover > #share-modal {
-  visibility: visible;
-}
 @media (max-width: 800px) {
   section {
     padding: 3rem 2rem 2rem;
@@ -132,8 +130,8 @@ section .info div#share-button:hover > #share-modal {
   display: grid;
   place-items: center;
   border-radius: 0.75rem;
-  top: -200%;
-  left: -300%;
+  top: 54%;
+  right: -5.5%;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 #share-modal .content {
@@ -159,6 +157,22 @@ section .info div#share-button:hover > #share-modal {
   font-family: "Manrope", sans-serif;
   letter-spacing: 0.3rem;
   font-size: 0.7rem;
+}
+@media (max-width: 800px) {
+  #share-modal {
+    top: unset;
+    bottom: 0;
+    right: 0;
+    border-radius: 0 0 1rem 1rem;
+    width: 100%;
+    height: 80px;
+  }
+  #share-modal .content {
+    width: 100%;
+  }
+  #share-modal .content:before {
+    content: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
